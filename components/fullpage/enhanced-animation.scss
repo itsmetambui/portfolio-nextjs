@@ -1,88 +1,83 @@
 @import "~react-awesome-slider/src/core/styles.scss";
 
-// CHANGE THE CSS AND ADD THE PROPERTY
-
 .#{$root-element} {
   &--cubeAnimation {
-    --cube-animation-duration: 675ms;
-    --cube-animation-perspective: 1800px;
-    --cube-animation-ease-in: cubic-bezier(0.8, 0, 1, 0.8);
-    --cube-animation-ease-out: cubic-bezier(0, 0.2, 0.2, 1);
-    --cube-translateZ-distance: -225px;
-
     .#{$root-element} {
-      &__container {
-        perspective: var(--cube-animation-perspective);
-      }
-
-      &--moveRight {
-        transform-origin: 0% 50%;
-        animation: cubeLeftIn var(--cube-animation-duration) both
-          var(--cube-animation-ease-in);
-      }
-
-      &--moveLeft {
-        transform-origin: 100% 50%;
-        animation: cubeRightIn var(--cube-animation-duration) both
-          var(--cube-animation-ease-in);
-      }
-
-      &--exit {
-        &.#{$root-element}--moveLeft {
-          transform-origin: 100% 50%;
-          animation: cubeLeftOut var(--cube-animation-duration) both
+      @media (min-width: 768px) {
+        // in down
+        &--moveRight {
+          transform-origin: 50% 0%;
+          animation: cubeUpIn var(--cube-animation-duration) both
             var(--cube-animation-ease-in);
         }
-        &.#{$root-element}--moveRight {
-          transform-origin: 0% 50%;
-          animation: cubeRightOut var(--cube-animation-duration) both
+
+        // in up
+        &--moveLeft {
+          transform-origin: 50% 100%;
+          animation: cubeDownIn var(--cube-animation-duration) both
             var(--cube-animation-ease-in);
+        }
+
+        &--exit {
+          // out up
+          &.#{$root-element}--moveLeft {
+            transform-origin: 50% 100%;
+            animation: cubeUpOut var(--cube-animation-duration) both
+              var(--cube-animation-ease-in);
+          }
+          // out down
+          &.#{$root-element}--moveRight {
+            transform-origin: 50% 0%;
+            animation: cubeDownOut var(--cube-animation-duration) both
+              var(--cube-animation-ease-in);
+          }
         }
       }
     }
   }
 }
 
-@keyframes cubeLeftOut {
+@keyframes cubeUpOut {
   50% {
     animation-timing-function: var(--cube-animation-ease-out);
-    transform: translateX(-50%) translateZ(var(--cube-translateZ-distance))
-      rotateY(-45deg);
+    transform: translateY(-50%) translateZ(var(--cube-translateZ-distance))
+      rotateX(45deg);
   }
   100% {
-    transform: translateX(-100%) rotateY(-90deg);
+    transform: translateY(-100%) rotateX(90deg);
   }
 }
-
-@keyframes cubeRightOut {
+// good
+@keyframes cubeDownOut {
   50% {
     animation-timing-function: var(--cube-animation-ease-out);
-    transform: translateX(50%) translateZ(var(--cube-translateZ-distance))
-      rotateY(45deg);
+    transform: translateY(50%) translateZ(var(--cube-translateZ-distance))
+      rotateX(-45deg);
   }
   100% {
-    transform: translateX(100%) rotateY(90deg);
+    transform: translateY(100%) rotateX(-90deg);
   }
 }
 
-@keyframes cubeLeftIn {
+@keyframes cubeUpIn {
   0% {
-    transform: translateX(100%) rotateY(90deg);
+    transform: translateY(100%) rotateX(90deg);
   }
   50% {
     animation-timing-function: var(--cube-animation-ease-out);
-    transform: translateX(50%) translateZ(var(--cube-translateZ-distance))
-      rotateY(45deg);
+    transform: translateY(50%) translateZ(var(--cube-translateZ-distance))
+      rotateX(-45deg);
   }
 }
 
-@keyframes cubeRightIn {
+// good
+@keyframes cubeDownIn {
   0% {
-    transform: translateX(-100%) rotateY(-90deg);
+    transform: translateY(-100%) rotateX(90deg);
   }
   50% {
     animation-timing-function: var(--cube-animation-ease-out);
-    transform: translateX(-50%) translateZ(var(--cube-translateZ-distance))
-      rotateY(-45deg);
+    transform: translateY(-50%) translateZ(var(--cube-translateZ-distance))
+      rotateX(45deg);
   }
 }
