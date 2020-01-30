@@ -6,7 +6,7 @@ import {
   withNavigationContext
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
-import Startup from "../startup/startup";
+import Startup from "../startup/StartUp";
 
 const Slider = withNavigationHandlers(AwesomeSlider);
 
@@ -16,7 +16,7 @@ export default withNavigationContext(({ fullpage }) => {
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={275}
+      startupDelay={500}
       animation="cubeAnimation"
       organicArrows={false}
       fillParent

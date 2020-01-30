@@ -1,6 +1,6 @@
 $size: 72px;
 $speed: 2;
-$color-primary: #61dafb;
+$color-primary: var(--color-primary);
 $total: 3;
 $angle: 66deg;
 
@@ -15,7 +15,7 @@ $angle: 66deg;
 }
 
 .logo-container {
-  --size: #{$size};
+  --size: 164px;
   --ellipse: calc(var(--size) / 2);
   --circle: calc(var(--ellipse) / 10);
   --border: calc(var(--size) / 16);
@@ -31,7 +31,7 @@ $angle: 66deg;
   z-index: 1000;
 
   &:before {
-    content: ' ';
+    content: " ";
     background-color: var(--background);
     border-radius: calc(var(--size) / 12);
     display: block;
@@ -51,7 +51,7 @@ $angle: 66deg;
     transform-style: preserve-3d;
     &:before {
       @extend %path;
-      content: ' ';
+      content: " ";
       width: calc(var(--circle) * 2);
       height: calc(var(--circle) * 2);
       animation: path linear infinite;

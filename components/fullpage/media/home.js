@@ -4,7 +4,7 @@ import Typing from "react-typing-animation";
 import Wrapper from "../components/ContentWrapper";
 import AnimatedLogo from "../components/AnimatedLogo";
 import HeaderWrapper from "../components/HeaderWrapper";
-import useDimensions from "../hooks/useWindowDimensions";
+import useDimensions from "../../../hooks/useWindowDimensions";
 
 export default () => {
   const { isSmBreakpoint, isMdBreakpoint, isLgBreakpoint } = useDimensions();
