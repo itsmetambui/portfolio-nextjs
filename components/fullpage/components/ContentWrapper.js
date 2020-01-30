@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
 const Wrapper = props => {
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col p-6 md:p-12">
       <span className="font-tags text-gray-700">&nbsp;&nbsp;&lt;body&gt;</span>
       <div className="flex-1 flex">{props.children}</div>
       <span className="font-tags text-gray-700">
@@ -11,7 +11,7 @@ const Wrapper = props => {
         &lt;/html&gt;
       </span>
     </div>
-  )
-}
+  );
+};
 
-export default Wrapper
+export default Wrapper;

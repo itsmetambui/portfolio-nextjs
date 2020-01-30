@@ -1,11 +1,10 @@
 import React from "react";
 import Typing from "react-typing-animation";
-import dynamic from "next/dynamic";
 
-import Wrapper from "./components/ContentWrapper";
-import AnimatedLogo from "./components/AnimatedLogo";
-import HeaderWrapper from "./components/HeaderWrapper";
-import useDimensions from "./hooks/useWindowDimensions";
+import Wrapper from "../components/ContentWrapper";
+import AnimatedLogo from "../components/AnimatedLogo";
+import HeaderWrapper from "../components/HeaderWrapper";
+import useDimensions from "../hooks/useWindowDimensions";
 
 export default () => {
   const { isSmBreakpoint, isMdBreakpoint, isLgBreakpoint } = useDimensions();
@@ -21,7 +20,7 @@ export default () => {
     <Wrapper>
       <div className="flex-1 flex flex-row justify-center items-center relative">
         <div className="z-10 flex-1 lg:pl-8">
-          <Typing startDelay={2000} speed={70} cursorClassName="typing-cursor">
+          <Typing startDelay={2500} speed={70} cursorClassName="typing-cursor">
             <HeaderWrapper
               className="mb-4"
               endTagPosition={isSmBreakpoint ? "end" : "inline"}

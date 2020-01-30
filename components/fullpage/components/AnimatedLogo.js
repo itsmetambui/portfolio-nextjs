@@ -1,27 +1,28 @@
-import React, { useEffect } from "react"
-import gsap from "gsap"
+import React, { useEffect } from "react";
+import gsap from "gsap";
 
 export default () => {
   useEffect(() => {
-    const tl = gsap.timeline()
-    const left = document.querySelector(".left")
-    const leftLength = left.getTotalLength()
-    const right = document.querySelector(".right")
-    const rightLength = right.getTotalLength()
+    const tl = gsap.timeline({ delay: 1 });
+    const left = document.querySelector(".left");
+    const leftLength = left.getTotalLength();
+    const right = document.querySelector(".right");
+    const rightLength = right.getTotalLength();
 
     tl.set(".left", {
       "stroke-dasharray": leftLength,
-      "stroke-dashoffset": -leftLength,
+      "stroke-dashoffset": -leftLength
     })
       .set(".right", {
         "stroke-dasharray": rightLength,
-        "stroke-dashoffset": -rightLength,
+        "stroke-dashoffset": -rightLength
       })
+      .to(".stroke", { duration: 0.1, ["stroke-opacity"]: 1 })
       .to(".left", { duration: 1, "stroke-dashoffset": 0 })
       .to(".right", { duration: 1, "stroke-dashoffset": 0 }, "-=0.5")
       .from(".fill", { duration: 1, "fill-opacity": 0 })
-      .to(".stroke", { duration: 1, opacity: 0 }, "-=1")
-  }, [])
+      .to(".stroke", { duration: 1, opacity: 0 }, "-=1");
+  }, []);
 
   return (
     <svg
@@ -75,7 +76,7 @@ export default () => {
                 fillOpacity="0"
                 stroke="#adadad"
                 strokeWidth="2"
-                strokeOpacity="1"
+                strokeOpacity="0"
                 className="stroke"
               ></use>
             </g>
@@ -96,7 +97,7 @@ export default () => {
                 fillOpacity="0"
                 stroke="#adadad"
                 strokeWidth="2"
-                strokeOpacity="1"
+                strokeOpacity="0"
                 className="stroke"
               ></use>
             </g>
@@ -104,5 +105,5 @@ export default () => {
         </g>
       </g>
     </svg>
-  )
-}
+  );
+};

@@ -15,22 +15,22 @@ const navigationItems = [
   {
     icon: "fal fa-user",
     text: "About",
-    route: "/about"
+    route: "about"
   },
   {
     icon: "fal fa-fire",
     text: "Skills",
-    route: "/skills"
+    route: "skills"
   },
   {
     icon: "fal fa-book",
     text: "Works",
-    route: "/works"
+    route: "works"
   },
   {
     icon: "fal fa-envelope",
     text: "Contact",
-    route: "/contact"
+    route: "contact"
   }
 ];
 

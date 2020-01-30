@@ -1,9 +1,9 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
+// import AwesomeSlider from "react-awesome-slider";
 // import AwesomeSliderStyles from "react-awesome-slider/src/styled/cube-animation";
 
-import Wrapper from "./components/ContentWrapper";
-import HeaderWrapper from "./components/HeaderWrapper";
+import Wrapper from "../components/ContentWrapper";
+import HeaderWrapper from "../components/HeaderWrapper";
 
 // const slider = (
 //   <AwesomeSlider animation="cubeAnimation" cssModule={AwesomeSliderStyles}>
