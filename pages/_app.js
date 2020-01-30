@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import "../styles/main.css";
+import "../public/font/css/icons.scss";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
