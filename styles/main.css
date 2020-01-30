@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-black;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore");
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.typing-cursor {
+  color: white !important;
 }
