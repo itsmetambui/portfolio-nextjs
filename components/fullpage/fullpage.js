@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
+import "./enhanced-animation.scss";
 import {
   withNavigationHandlers,
   withNavigationContext
