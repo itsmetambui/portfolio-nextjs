@@ -21,7 +21,7 @@ function App({ Component, pageProps }) {
           name="description"
           content="Fullpage navigation HOC with 3D animated transitions built on top of React Awesome Slider. GatsbyJS and NextJS recipes available."
         />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Layout>
         <Component {...pageProps} />
