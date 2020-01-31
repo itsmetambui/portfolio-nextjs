@@ -36,10 +36,10 @@ const TagCanvas = () => {
 export default TagCanvas;
 
 const options = {
-  textColour: "#02fdd8",
+  textColour: "#F7FAFC",
   outlineThickness: 0.5,
   outlineColour: "#fe0853",
-  maxSpeed: 0.06,
+  maxSpeed: 0.04,
   freezeActive: true,
   shuffleTags: true,
   shape: "sphere",

@@ -19,7 +19,7 @@ export default withNavigationContext(({ fullpage }) => {
       startupScreen={<Startup />}
       startupDelay={500}
       animation="cubeAnimation"
-      organicArrows={false}
+      buttons={false}
       fillParent
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END

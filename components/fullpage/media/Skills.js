@@ -16,7 +16,7 @@ export default () => {
               </h1>
             </HeaderWrapper>
           </div>
-          <div className="text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
+          <div className="hidden md:block text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
             <p className="mb-4">
               Main area of my expertise is front end development and everything
               related with web development. HTML, CSS, JS, TS, building single
