@@ -1,0 +1,80 @@
+.inputWrapper {
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  margin: 5px 0;
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff7400;
+    transition: 0.4s;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    color: #8d8d8d;
+    background: #37393b;
+    box-sizing: border-box;
+    border: 0;
+    height: 50px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    outline-width: 0;
+  }
+
+  input:focus ~ span,
+  textarea:focus ~ span {
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  input {
+    padding: 0 20px;
+  }
+
+  textarea {
+    padding: 20px;
+    min-height: 150px;
+  }
+}
+
+.submit {
+  text-transform: uppercase;
+  color: #ff7400;
+  border: 1px solid #ff7400;
+  border-radius: 5px;
+  background: transparent;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  letter-spacing: 3px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #ff7400;
+    color: black;
+  }
+}
+
+.info {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: #000;
+  font-size: 13px;
+  padding: 20px;
+
+  p {
+    margin: 5px 0;
+    span {
+      color: #ff7400;
+    }
+  }
+}

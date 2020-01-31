@@ -1,43 +1,42 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "../../../public/js/tag-canvas.min";
 
-class TagCanvas extends Component {
-  componentDidMount() {
+const TagCanvas = () => {
+  useEffect(() => {
     try {
       window.TagCanvas.Start("skillChartCanvas", "tags", options);
     } catch (e) {
       document.getElementById("skillChartContainer").style.display = "none";
     }
-  }
+  }, []);
 
-  render() {
-    const tags = items.map((item, idx) => {
-      return (
-        <li key={idx}>
-          <a>{item}</a>
-        </li>
-      );
-    });
+  const tags = items.map((item, idx) => {
     return (
-      <React.Fragment>
-        <div id="skillChartContainer">
-          <canvas id="skillChartCanvas" width={getSize()} height={getSize()}>
-            <p>Tag Canvas</p>
-          </canvas>
-        </div>
-        <div id="tags">
-          <ul>{tags}</ul>
-        </div>
-      </React.Fragment>
+      <li key={idx}>
+        <a>{item}</a>
+      </li>
     );
-  }
-}
+  });
+
+  return (
+    <>
+      <div id="skillChartContainer">
+        <canvas id="skillChartCanvas" width={getSize()} height={getSize()}>
+          <p>Tag Canvas</p>
+        </canvas>
+      </div>
+      <div id="tags" className="hidden">
+        <ul>{tags}</ul>
+      </div>
+    </>
+  );
+};
 
 export default TagCanvas;
 
 const options = {
-  textColour: "#ff7400",
+  textColour: "#02fdd8",
   outlineThickness: 0.5,
   outlineColour: "#fe0853",
   maxSpeed: 0.06,
@@ -46,7 +45,7 @@ const options = {
   shape: "sphere",
   zoom: 1,
   noSelect: true,
-  textFont: null,
+  textFont: "Open Sans",
   pinchZoom: true,
   freezeDecel: true,
   fadeIn: 3000,

@@ -20,7 +20,9 @@
     "react": "^16.12.0",
     "react-awesome-slider": "^3.2.2",
     "react-dom": "^16.12.0",
-    "react-typing-animation": "^1.6.2"
+    "react-google-maps": "^9.4.5",
+    "react-typing-animation": "^1.6.2",
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

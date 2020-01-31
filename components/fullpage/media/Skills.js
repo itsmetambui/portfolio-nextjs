@@ -19,18 +19,18 @@ export default () => {
           <div className="text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
             <p className="mb-4">
               Main area of my expertise is front end development and everything
-              related with web development. HTML, CSS, JS (ES5, ES6), building
-              single page web applications with Angular, React...
+              related with web development. HTML, CSS, JS, TS, building single
+              page web applications with React, Angular...
             </p>
             <p className="mb-4">
-              Often I work as a full-stack developer, experienced with backend
-              development with Java, Node, and frameworks like Express, Nestjs,
+              I often work as a full-stack developer, experienced with backend
+              development with Node, Java, and frameworks like Express, Nestjs,
               and Spring.
             </p>
 
             <p className="mb-4">
-              I have also some experience working with databases like
-              PostgreSQL, MongoBD.
+              I also have experience working with databases like PostgreSQL,
+              MongoDB, CI/CD tools and Docker.
             </p>
           </div>
         </div>

@@ -5,6 +5,9 @@ const withFonts = require("next-fonts");
 module.exports = withCSS(
   withSass(
     withFonts({
+      env: {
+        googleMapKey: "AIzaSyCUfCOt2hnxLnR3lhsYKxuyrAZcpGt8biQ"
+      },
       enableSvg: true,
       webpack(config, options) {
         return config;

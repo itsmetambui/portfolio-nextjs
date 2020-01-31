@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 const Home = dynamic(() => import("./Home"), { ssr: false });
 const Skills = dynamic(() => import("./Skills"), { ssr: false });
 import About from "./About";
+import Contact from "./Contact";
 
 const pageClassnames = "h-full w-full bg-dark-100";
 
@@ -23,5 +24,10 @@ export const media = [
     slug: "skills",
     className: pageClassnames,
     children: <Skills />
+  },
+  {
+    slug: "contact",
+    className: pageClassnames,
+    children: <Contact />
   }
 ];
