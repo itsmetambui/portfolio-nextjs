@@ -1,21 +1,37 @@
 import React from "react";
-// import AwesomeSlider from "react-awesome-slider";
-// import AwesomeSliderStyles from "react-awesome-slider/src/styled/cube-animation";
 
 import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
+import Testimonial from "../components/Testimonial";
 
-// const slider = (
-//   <AwesomeSlider animation="cubeAnimation" cssModule={AwesomeSliderStyles}>
-//     <div data-src="/images/review-1.png" />
-//     <div data-src="/images/review-2.png" />
-//   </AwesomeSlider>
-// );
+const testimonials = [
+  {
+    name: "David Veszelovszki",
+    image: "/images/david-thumb.jpeg",
+    rating: 5,
+    rewiew:
+      "A++ freelancer, highly recommended, would hire again! I wish you great jobs on Upwork Tam!"
+  },
+  {
+    name: "Dmytro Ulyanets",
+    image: "/images/dima-thumb.jpeg",
+    rating: 5,
+    rewiew:
+      "A+++ freelancer, highly recommended, would hire again! I wish you great jobs on Upwork Tam!"
+  },
+  {
+    name: "Vipul Hadiya",
+    initial: "VH",
+    rating: 5,
+    rewiew:
+      "Tam is like a Node.Js wizard. He solved my problem within an hour. His availability and communication is really fast and regular. He is more than a programmer. Thank you Tam."
+  }
+];
 
 export default () => {
   return (
     <Wrapper>
-      <div className="flex-1 flex flex-col items-start justify-center relative lg:pl-8">
+      <div className="flex-1 flex flex-col items-start md:flex-row md:items-center justify-center relative lg:pl-8 w-full">
         <div className="w-full md:w-1/2">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
@@ -46,7 +62,11 @@ export default () => {
             </p>
           </div>
         </div>
-        {/* <div>{slider}</div> */}
+        <div className="relative w-full md:w-1/2">
+          {/* {testimonials.map(item => {
+            return <Testimonial key={item.name} {...item} />;
+          })} */}
+        </div>
       </div>
     </Wrapper>
   );

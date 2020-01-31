@@ -1,8 +1,8 @@
 import React from "react";
 import FullpageSlider from "../components/fullpage/fullpage";
 
-const AboutPage = () => {
+const SkillsPage = () => {
   return <FullpageSlider />;
 };
 
-export default AboutPage;
+export default SkillsPage;
