@@ -62,11 +62,7 @@ export default () => {
             </p>
           </div>
         </div>
-        <div className="relative w-full md:w-1/2">
-          {/* {testimonials.map(item => {
-            return <Testimonial key={item.name} {...item} />;
-          })} */}
-        </div>
+        <div className="relative w-full md:w-1/2">Test</div>
       </div>
     </Wrapper>
   );
