@@ -82,20 +82,3 @@
     font-size: 0.875rem;
   }
 }
-
-.info {
-  z-index: 2;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  background: #000;
-  font-size: 13px;
-  padding: 20px;
-
-  p {
-    margin: 5px 0;
-    span {
-      color: #ff7400;
-    }
-  }
-}
