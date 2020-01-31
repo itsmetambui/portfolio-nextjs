@@ -3,6 +3,7 @@ import React from "react";
 import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
 import Testimonial from "../components/Testimonial";
+import AboutCharacter from "../components/AboutCharacter";
 
 const testimonials = [
   {
@@ -31,9 +32,11 @@ const testimonials = [
 export default () => {
   return (
     <Wrapper>
-      <div className="flex-1 flex flex-col items-start md:flex-row md:items-center justify-center relative lg:pl-8 w-full">
-        <div className="w-full md:w-1/4"></div>
-        <div className="relative w-full md:w-1/2">
+      <div className="flex flex-col items-start md:flex-row md:items-center justify-center relative w-full">
+        <div className="w-full">
+          <AboutCharacter></AboutCharacter>
+        </div>
+        <div className="relative w-full md:pl-12">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
               <h1 className="font-header text-3xl sm:text-4xl md:text-5xl text-orange-600 font-bold leading-tight transition-all">
