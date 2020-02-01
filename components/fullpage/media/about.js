@@ -33,7 +33,7 @@ export default () => {
   return (
     <Wrapper>
       <div className="flex flex-col items-start md:flex-row md:items-center justify-center relative w-full">
-        <div className="w-full">
+        <div className="w-full hidden sm:block">
           <AboutCharacter></AboutCharacter>
         </div>
         <div className="relative w-full md:pl-12">

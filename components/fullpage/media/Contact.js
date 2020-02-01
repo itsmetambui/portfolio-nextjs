@@ -10,7 +10,7 @@ export default () => {
   return (
     <Wrapper>
       <div className="flex-1 flex flex-col items-start md:flex-row md:items-center justify-center relative lg:pl-8 w-full">
-        <div className="flex-1/2 w-full md:w-1/2 z-10 md:bg-dark-200 pb-8 px-12 md:py-8 md:rounded fixed bottom-0 left-0 shadow-lg">
+        <div className="flex-1/2 w-full md:w-1/2 z-10 pb-8 px-12 md:py-8 rounded fixed bottom-0 left-0 shadow-lg contact">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
               <h1 className="font-header text-3xl sm:text-4xl md:text-5xl text-orange-600 font-bold leading-tight transition-all">
