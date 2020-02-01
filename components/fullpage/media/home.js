@@ -1,5 +1,5 @@
-import React from "react";
-import Typing from "react-typing-animation";
+import React, { useEffect } from "react";
+import Typist from "react-typist";
 
 import Wrapper from "../components/ContentWrapper";
 import AnimatedLogo from "../components/AnimatedLogo";
@@ -20,12 +20,12 @@ export default () => {
     <Wrapper>
       <div className="flex-1 flex flex-row justify-center items-center relative">
         <div className="z-10 flex-1 lg:pl-8">
-          <Typing startDelay={2500} speed={70} cursorClassName="typing-cursor">
-            <HeaderWrapper
-              className="mb-4"
-              endTagPosition={isSmBreakpoint ? "end" : "inline"}
-            >
-              <h1 className="font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all">
+          <HeaderWrapper
+            className="mb-4"
+            endTagPosition={isSmBreakpoint ? "end" : "inline"}
+          >
+            <div className="font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all">
+              <Typist startDelay={2500} cursor={{ hideWhenDone: true }}>
                 Hi,
                 <br />
                 I'm{" "}
@@ -39,15 +39,16 @@ export default () => {
                 am,
                 <br />
                 fullstack developer.
-              </h1>
-            </HeaderWrapper>
-            <Typing.Speed ms={5} />
-            <p className="text-xs md:text-sm tracking-wide font-body text-gray-500 font-semibold">
+              </Typist>
+            </div>
+          </HeaderWrapper>
+          <div className="text-xs md:text-sm tracking-wide font-body text-gray-500 font-semibold">
+            <Typist startDelay={5000} cursor={{ hideWhenDone: true }}>
               <span> React / Node /</span>
               <span> Mongo / Postgres /</span>
               <span> AWS / Docker / CI, CD ...</span>
-            </p>
-          </Typing>
+            </Typist>
+          </div>
         </div>
         <div
           className="absolute abs-center -mt-16 ml-16 md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16 transition-all"
