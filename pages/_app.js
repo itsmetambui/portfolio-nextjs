@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-awesome-slider/dist/navigation";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import "../styles/main.css";
@@ -15,7 +15,7 @@ function App({ Component, pageProps }) {
         <title>TB - Fullstack Developer</title>
         <meta
           name="viewport"
-          content="width=device-width,minimum-scale=0.8,maximum-scale=1,user-scalable=no"
+          content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
         <meta
           name="description"

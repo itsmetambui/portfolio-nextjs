@@ -1,0 +1,17 @@
+.layout {
+  .support-device-orientation {
+    display: block;
+  }
+  .unsupport-device-orientation {
+    display: none;
+  }
+
+  @media (max-height: 639px) and (orientation: landscape) {
+    .support-device-orientation {
+      display: none;
+    }
+    .unsupport-device-orientation {
+      display: block;
+    }
+  }
+}
