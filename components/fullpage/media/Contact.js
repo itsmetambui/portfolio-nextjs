@@ -26,7 +26,7 @@ export default () => {
             </p>
             <form
               method="POST"
-              action="https://formspree.io/blvtam4494@gmail.com"
+              action="https://formspree.io/itsmetambui@gmail.com"
             >
               <div>
                 <div className="inputWrapper">
