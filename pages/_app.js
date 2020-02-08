@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Provider } from "react-awesome-slider/dist/navigation";
 import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
+import Script from "react-load-script";
 import Head from "next/head";
 import "../styles/main.css";
 import "../public/font/css/icons.scss";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
   return (
     <Provider slug={router.route}>
@@ -23,9 +25,13 @@ function App({ Component, pageProps }) {
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {!loading && (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+      <Script url="https://code.jquery.com/jquery-3.4.1.min.js" />
+      <Script url="./js/magic-wall.js" onLoad={() => setLoading(false)} />
     </Provider>
   );
 }

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 // Home's using useWindowDimentions which has window, unvailable with ssr
 const Home = dynamic(() => import("./Home"), { ssr: false });
 const Skills = dynamic(() => import("./Skills"), { ssr: false });
+const Works = dynamic(() => import("./Works"), { ssr: false });
 import About from "./About";
 import Contact from "./Contact";
 
@@ -24,6 +25,11 @@ export const media = [
     slug: "skills",
     className: pageClassnames,
     children: <Skills />
+  },
+  {
+    slug: "works",
+    className: pageClassnames,
+    children: <Works />
   },
   {
     slug: "contact",
