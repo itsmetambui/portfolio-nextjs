@@ -2,32 +2,7 @@ import React from "react";
 
 import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
-import Testimonial from "../components/Testimonial";
 import AboutCharacter from "../components/AboutCharacter";
-
-const testimonials = [
-  {
-    name: "David Veszelovszki",
-    image: "/images/david-thumb.jpeg",
-    rating: 5,
-    rewiew:
-      "A++ freelancer, highly recommended, would hire again! I wish you great jobs on Upwork Tam!"
-  },
-  {
-    name: "Dmytro Ulyanets",
-    image: "/images/dima-thumb.jpeg",
-    rating: 5,
-    rewiew:
-      "A+++ freelancer, highly recommended, would hire again! I wish you great jobs on Upwork Tam!"
-  },
-  {
-    name: "Vipul Hadiya",
-    initial: "VH",
-    rating: 5,
-    rewiew:
-      "Tam is like a Node.Js wizard. He solved my problem within an hour. His availability and communication is really fast and regular. He is more than a programmer. Thank you Tam."
-  }
-];
 
 export default () => {
   return (

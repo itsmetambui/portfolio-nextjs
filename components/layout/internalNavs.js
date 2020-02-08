@@ -4,7 +4,7 @@ import {
   Link
 } from "react-awesome-slider/dist/navigation";
 import cn from "classnames";
-import "./internalNavs.scss";
+import "./InternalNavs.scss";
 
 const navigationItems = [
   {
@@ -60,11 +60,11 @@ export default withNavigationContext(({ toggle, fullpage }) => {
   return (
     <nav
       className={cn(
-        "nav",
         { show: toggle },
         "absolute sm:relative sm:left-auto sm:top-auto flex flex-row md:flex-col justify-around transition-all",
         "w-full sm:w-auto h-auto md:h-64 top-16 md:left-0 md:top-0 bg-dark-200",
-        "z-10"
+        "z-10",
+        "nav"
       )}
     >
       {links}

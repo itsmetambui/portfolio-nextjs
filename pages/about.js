@@ -1,5 +1,5 @@
 import React from "react";
-import FullpageSlider from "../components/fullpage/fullpage";
+import FullpageSlider from "../components/fullpage/Fullpage";
 
 const AboutPage = () => {
   return <FullpageSlider />;

@@ -1,6 +1,10 @@
 .nav {
   left: 100%;
 
+  @media (min-width: 768px) {
+    left: 0;
+  }
+
   &.show {
     left: 0;
   }
