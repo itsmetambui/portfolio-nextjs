@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-awesome-slider/dist/navigation";
 import "./WorksWall.scss";
 
 export default () => {
@@ -38,15 +39,212 @@ export default () => {
     <div className="h-full w-full">
       <div id="demo" className="magicwall" data-delay="3000">
         <ul className="magicwall-grid">
-          <li data-thumb="./images/works/p-1.png">
+          <li data-thumb="./images/works/buildweb.png">
             <div className="magicwall-content text-lg">
               <p className="magicwall-links shadow-sm text-gray-700">
-                <a className="mx-2 hover:text-gray-800">
+                <Link className="mx-2 hover:text-gray-800" href="contact">
+                  <i className="fal fa-envelope" />
+                </Link>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/wizer.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://wizer-training.com/"
+                >
                   <i className="fal fa-eye" />
                 </a>
-                <a className="mx-2 hover:text-gray-800">
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/trillio.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://tb-trillio.now.sh/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/trillio"
+                >
                   <i className="fab fa-github-alt" />
                 </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/natours.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://tb-natours.now.sh/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/natours"
+                >
+                  <i className="fab fa-github-alt" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/ilovelamp.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://tb-ilovelamp.now.sh/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/react-demo-store"
+                >
+                  <i className="fab fa-github-alt" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/spacexplorer.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://spacexplorer.now.sh/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/spacexplorer"
+                >
+                  <i className="fab fa-github-alt" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/vutachat.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://vutachat.herokuapp.com/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/vutachat"
+                >
+                  <i className="fab fa-github-alt" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/easierchef.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://easierchef.com/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/codeberry.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://codeberryschool.com/vi/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/vayvoncantho.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="http://vayvoncantho.com/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://github.com/itsmetambui/vayvoncantho"
+                >
+                  <i className="fab fa-github-alt" />
+                </a>
+              </p>
+            </div>
+          </li>
+
+          <li data-thumb="./images/works/dep.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://dep.com.vn/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/hireme.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <Link className="mx-2 hover:text-gray-800" href="contact">
+                  <i className="fal fa-envelope" />
+                </Link>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/buildweb.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <Link className="mx-2 hover:text-gray-800" href="contact">
+                  <i className="fal fa-envelope" />
+                </Link>
+              </p>
+            </div>
+          </li>
+          <li data-thumb="./images/works/hireme.png">
+            <div className="magicwall-content text-lg">
+              <p className="magicwall-links shadow-sm text-gray-700">
+                <Link className="mx-2 hover:text-gray-800" href="contact">
+                  <i className="fal fa-envelope" />
+                </Link>
               </p>
             </div>
           </li>
