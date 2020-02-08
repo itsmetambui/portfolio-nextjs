@@ -230,21 +230,29 @@ export default () => {
               </p>
             </div>
           </li>
-          <li data-thumb="./images/works/buildweb.png">
+          <li data-thumb="./images/works/spacestep.png">
             <div className="magicwall-content text-lg">
               <p className="magicwall-links shadow-sm text-gray-700">
-                <Link className="mx-2 hover:text-gray-800" href="contact">
-                  <i className="fal fa-envelope" />
-                </Link>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="http://spacestep.ca/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
               </p>
             </div>
           </li>
-          <li data-thumb="./images/works/hireme.png">
+          <li data-thumb="./images/works/tambui.png">
             <div className="magicwall-content text-lg">
               <p className="magicwall-links shadow-sm text-gray-700">
-                <Link className="mx-2 hover:text-gray-800" href="contact">
-                  <i className="fal fa-envelope" />
-                </Link>
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://itsmetambui.now.sh/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
               </p>
             </div>
           </li>

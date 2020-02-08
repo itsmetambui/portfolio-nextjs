@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Typist from "react-typist";
+import cn from "classnames";
 
 import Wrapper from "../components/ContentWrapper";
 import AnimatedLogo from "../components/AnimatedLogo";
@@ -49,6 +50,18 @@ export default () => {
               <span> AWS / Docker / CI, CD ...</span>
             </Typist>
           </div>
+          <a
+            className={cn(
+              "inline-block uppercase text-orange-500 rounded border border-orange-500 text-xs px-6 py-3 my-3 transition-all",
+              "hover:bg-orange-500 hover:text-gray-200",
+              "md:px-5 md:px-10 md:my-5 md:text-sm",
+              "absolute bottom-16"
+            )}
+            href="https://drive.google.com/file/d/1L0Nv0RYt-Oya-jT9uUv1DP3-CwZWa1y9/view?usp=sharing"
+            target="_blank"
+          >
+            Download resume
+          </a>
         </div>
         <div
           className="absolute abs-center -mt-16 ml-16 md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16 transition-all"
