@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { Provider } from "react-awesome-slider/dist/navigation";
-import Layout from "../components/layout/Layout";
 import { useRouter } from "next/router";
 import Script from "react-load-script";
 import Head from "next/head";
+
+const Layout = dynamic(() => import("../components/layout/Layout"), {
+  ssr: false
+});
 import "../styles/main.css";
 import "../public/font/css/icons.scss";
 
