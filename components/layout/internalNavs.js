@@ -1,7 +1,7 @@
 import React from "react";
 import {
   withNavigationContext,
-  Link
+  Link,
 } from "react-awesome-slider/dist/navigation";
 import cn from "classnames";
 import "./InternalNavs.scss";
@@ -10,34 +10,34 @@ const navigationItems = [
   {
     icon: "fal fa-home",
     text: "Home",
-    route: ""
-  },
-  {
-    icon: "fal fa-user",
-    text: "About",
-    route: "about"
-  },
-  {
-    icon: "fal fa-fire",
-    text: "Skills",
-    route: "skills"
+    route: "",
   },
   {
     icon: "fal fa-book",
     text: "Works",
-    route: "works"
+    route: "works",
+  },
+  {
+    icon: "fal fa-user",
+    text: "About",
+    route: "about",
+  },
+  {
+    icon: "fal fa-fire",
+    text: "Skills",
+    route: "skills",
   },
   {
     icon: "fal fa-envelope",
     text: "Contact",
-    route: "contact"
-  }
+    route: "contact",
+  },
 ];
 
 export default withNavigationContext(({ toggle, fullpage }) => {
   const { slug } = fullpage.navigation;
 
-  const links = navigationItems.map(item => {
+  const links = navigationItems.map((item) => {
     return (
       <Link
         key={item.text}
