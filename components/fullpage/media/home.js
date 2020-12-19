@@ -19,22 +19,20 @@ export default () => {
 
   return (
     <Wrapper>
-      <div className="flex-1 flex flex-row justify-center items-center relative">
+      <div className="relative flex flex-row items-center justify-center flex-1">
         <div className="z-10 flex-1 lg:pl-8">
           <HeaderWrapper
             className="mb-4"
             endTagPosition={isSmBreakpoint ? "end" : "inline"}
           >
-            <div className="font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all">
-              <Typist startDelay={2500} cursor={{ hideWhenDone: true }}>
-                Hi,
-                <br />
-                I'm{" "}
+            <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
+              <Typist startDelay={500} cursor={{ hideWhenDone: true }}>
+                Hi, I'm{" "}
                 <span>
                   <img
                     src="/images/logo.png"
                     alt="logo letter"
-                    className="h-10 w-10 md:h-20 md:w-20 inline-block"
+                    className="inline-block w-10 h-10 md:h-20 md:w-20"
                   ></img>
                 </span>
                 am,
@@ -43,8 +41,8 @@ export default () => {
               </Typist>
             </div>
           </HeaderWrapper>
-          <div className="text-xs md:text-sm tracking-wide font-body text-gray-500 font-semibold">
-            <Typist startDelay={5000} cursor={{ hideWhenDone: true }}>
+          <div className="text-xs font-normal tracking-wide text-gray-500 md:text-sm font-body">
+            <Typist startDelay={2000} cursor={{ hideWhenDone: true }}>
               <span> React / Node /</span>
               <span> Mongo / Postgres /</span>
               <span> AWS / Docker / CI, CD ...</span>
@@ -54,8 +52,8 @@ export default () => {
             className={cn(
               "inline-block uppercase text-orange-500 rounded border border-orange-500 text-xs px-6 py-3 my-3 transition-all",
               "hover:bg-orange-500 hover:text-gray-200",
-              "md:px-5 md:px-10 md:my-5 md:text-sm",
-              "absolute bottom-16"
+              "md:px-5 md:my-5 md:text-sm",
+              "absolute bottom-16 font-sourcecode"
             )}
             href="https://drive.google.com/file/d/1L0Nv0RYt-Oya-jT9uUv1DP3-CwZWa1y9/view?usp=sharing"
             target="_blank"
@@ -64,11 +62,11 @@ export default () => {
           </a>
         </div>
         <div
-          className="absolute abs-center -mt-16 ml-16 md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16 transition-all"
+          className="absolute ml-16 -mt-16 transition-all abs-center md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16"
           style={{
             width: logoSize,
             height: logoSize,
-            transform: !isMdBreakpoint ? "translate(0, -50%)" : ""
+            transform: !isMdBreakpoint ? "translate(0, -50%)" : "",
           }}
         >
           <AnimatedLogo></AnimatedLogo>

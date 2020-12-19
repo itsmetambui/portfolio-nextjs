@@ -7,19 +7,19 @@ import AboutCharacter from "../components/AboutCharacter";
 export default () => {
   return (
     <Wrapper>
-      <div className="flex flex-col items-start md:flex-row md:items-center justify-center relative w-full">
-        <div className="w-full hidden sm:block">
+      <div className="relative flex flex-col items-start justify-center w-full md:flex-row md:items-center">
+        <div className="hidden w-full sm:block">
           <AboutCharacter></AboutCharacter>
         </div>
         <div className="relative w-full md:pl-12">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="font-header text-3xl sm:text-4xl md:text-5xl text-orange-600 font-bold leading-tight transition-all">
+              <h1 className="text-3xl font-bold leading-tight text-orange-600 transition-all font-header sm:text-4xl md:text-5xl">
                 About me.
               </h1>
             </HeaderWrapper>
           </div>
-          <div className="text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
+          <div className="text-xs font-light leading-relaxed tracking-wide text-gray-300 font-body md:text-sm">
             <p className="mb-4">
               I enjoy writing beautiful code, code that can be easily understood
               by future developers. With the help of Prettier, Eslint, Husky...,

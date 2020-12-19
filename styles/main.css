@@ -7,9 +7,45 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore");
 @import "~react-typist/dist/Typist.css";
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font/helvetica/Helvetica-Now-XBold.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font/helvetica/Helvetica-Now-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font/helvetica/Helvetica-Now-Black.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font/helvetica/Helvetica-Now.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/font/helvetica/Helvetica-Now-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sourcecodepro";
+  src: url("/font/sourcecodepro/SourceCodePro-Regular.ttf");
+  font-weight: 400;
+}
 
 .abs-center {
   position: absolute;
