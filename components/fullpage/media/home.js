@@ -27,7 +27,7 @@ export default () => {
     : isMdBreakpoint
     ? 500
     : isLgBreakpoint
-    ? 550
+    ? 600
     : 700;
 
   useEffect(() => {
@@ -102,6 +102,7 @@ export default () => {
           className="fixed bottom-0 transition-all md:absolute md:mb-24 md:bottom-0 md:right-0 md:z-10"
           style={{
             width: logoSize,
+            height: logoSize,
           }}
         >
           <ProfileImage />

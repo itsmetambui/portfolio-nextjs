@@ -59,10 +59,6 @@ const ProfileImage = () => {
       if (!illustrationImageRef.current) {
         return;
       }
-      points = points.filter(function (point) {
-        const age = Date.now() - point.time;
-        return age < pointLifetime;
-      });
       drawLineCanvas();
       drawImageCanvas();
       requestAnimationFrame(tick);
@@ -85,7 +81,7 @@ const ProfileImage = () => {
           minimumLineWidth + percentageLineWidth * lineWidthRange;
         const age = Date.now() - point.time;
         const opacity = (pointLifetime - age) / pointLifetime;
-        lineCanvasContext.strokeStyle = "rgba(0, 0, 0, " + opacity + ")";
+        lineCanvasContext.strokeStyle = "rgba(0, 0, 0, 1)";
         lineCanvasContext.beginPath();
         lineCanvasContext.moveTo(previousPoint.x, previousPoint.y);
         lineCanvasContext.lineTo(point.x, point.y);
@@ -135,26 +131,32 @@ const ProfileImage = () => {
   }, []);
 
   return (
-    <div ref={photoContainerRef}>
+    <div ref={photoContainerRef} className="relative w-full h-full">
+      <div className="absolute flex flex-col items-center text-2xl font-bold text-orange-500 transform -rotate-45 top-32 left-32 font-tags">
+        <span>Color me</span>
+        <i className="fal fa-hand-point-down" />
+      </div>
+
       <div
         className="drawCanvas"
         ref={containerRef}
+        className="w-full h-full"
         style={{
-          backgroundImage: `url(https://www.joaobairrada.com/assets/images/bairradaFace.png`,
-          backgroundSize: "cover",
+          backgroundImage: `url(/images/avatar-grey.png)`,
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          maxHeight: 785,
-          paddingBottom: "73%",
           position: "relative",
-          width: "100%",
           boxSizing: "border-box",
         }}
       >
         <img
           ref={illustrationImageRef}
-          className="hidden w-full illustrationImage"
-          src="https://www.joaobairrada.com/assets/images/illustrationImage.png"
+          className="hidden h-full illustrationImage"
+          src="/images/avatar-cartoon.png"
           alt="Tam Bui's illustration"
+          style={{
+            objectFit: "cover",
+          }}
         />
       </div>
     </div>
