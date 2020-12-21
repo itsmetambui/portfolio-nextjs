@@ -11,11 +11,11 @@ export default () => {
 
     tl.set(".left", {
       "stroke-dasharray": leftLength,
-      "stroke-dashoffset": -leftLength
+      "stroke-dashoffset": -leftLength,
     })
       .set(".right", {
         "stroke-dasharray": rightLength,
-        "stroke-dashoffset": -rightLength
+        "stroke-dashoffset": -rightLength,
       })
       .to(".stroke", { duration: 0.1, ["stroke-opacity"]: 1 })
       .to(".left", { duration: 1, "stroke-dashoffset": 0 })

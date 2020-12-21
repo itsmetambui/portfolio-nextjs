@@ -14,26 +14,26 @@ export const media = [
   {
     slug: "",
     className: pageClassnames,
-    children: <Home />
-  },
-  {
-    slug: "about",
-    className: pageClassnames,
-    children: <About />
-  },
-  {
-    slug: "skills",
-    className: pageClassnames,
-    children: <Skills />
+    children: <Home />,
   },
   {
     slug: "works",
     className: pageClassnames,
-    children: <Works />
+    children: <Works />,
+  },
+  {
+    slug: "about",
+    className: pageClassnames,
+    children: <About />,
+  },
+  {
+    slug: "skills",
+    className: pageClassnames,
+    children: <Skills />,
   },
   {
     slug: "contact",
     className: pageClassnames,
-    children: <Contact />
-  }
+    children: <Contact />,
+  },
 ];

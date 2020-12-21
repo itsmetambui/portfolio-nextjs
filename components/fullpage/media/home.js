@@ -46,7 +46,7 @@ export default () => {
             endTagPosition={isSmBreakpoint ? "end" : "inline"}
           >
             <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
-              <Typist startDelay={500} cursor={{ hideWhenDone: true }}>
+              <Typist startDelay={4500} cursor={{ hideWhenDone: true }}>
                 Hi, I'm{" "}
                 <span>
                   <img
@@ -62,7 +62,7 @@ export default () => {
             </div>
           </HeaderWrapper>
           <div className="text-xs font-medium tracking-wide text-white md:text-sm font-sourcecode">
-            <Typist startDelay={2000} cursor={{ hideWhenDone: true }}>
+            <Typist startDelay={6000} cursor={{ hideWhenDone: true }}>
               <span>
                 <i className="mr-1 fal fa-map-marker" />{" "}
                 {`Can Tho, Vietnam - ${currentTime}`}
@@ -70,7 +70,7 @@ export default () => {
             </Typist>
           </div>
           <div className="text-xs font-medium tracking-wide text-gray-300 md:text-sm font-sourcecode">
-            <Typist startDelay={2000} cursor={{ hideWhenDone: true }}>
+            <Typist startDelay={6000} cursor={{ hideWhenDone: true }}>
               <span>
                 <i className="mr-1 fal fa-certificate" />
               </span>
@@ -101,7 +101,7 @@ export default () => {
             transform: !isMdBreakpoint ? "translate(0, -50%)" : "",
           }}
         >
-          <AnimatedLogo></AnimatedLogo>
+          {/* <AnimatedLogo></AnimatedLogo> */}
         </div>
       </div>
     </Wrapper>

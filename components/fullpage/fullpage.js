@@ -4,7 +4,7 @@ import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import "./enhanced-animation.scss";
 import {
   withNavigationHandlers,
-  withNavigationContext
+  withNavigationContext,
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
 import Startup from "../startup/StartUp";
@@ -17,13 +17,14 @@ export default withNavigationContext(({ fullpage }) => {
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={500}
+      startupDelay={4000}
       animation="cubeAnimation"
       buttons={false}
       fillParent
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
         if (isFirstLoad.current === true) {
+          isFirstLoad.current = false;
           document.querySelector("body").classList.add("animated");
           document.querySelector("body").classList.add("visible");
         }
