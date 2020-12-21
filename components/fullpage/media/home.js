@@ -8,6 +8,7 @@ import Wrapper from "../components/ContentWrapper";
 import AnimatedLogo from "../components/AnimatedLogo";
 import HeaderWrapper from "../components/HeaderWrapper";
 import useDimensions from "../../../hooks/useWindowDimensions";
+import ProfileImage from "../components/ProfileImage";
 
 const GMT_7 = "Asia/Jakarta";
 const convertTZ = (date) => {
@@ -94,14 +95,14 @@ export default () => {
           </Link>
         </div>
         <div
-          className="absolute ml-16 -mt-16 transition-all abs-center md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16"
+          className="absolute z-10 ml-16 -mt-16 transition-all abs-center md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16"
           style={{
             width: logoSize,
             height: logoSize,
             transform: !isMdBreakpoint ? "translate(0, -50%)" : "",
           }}
         >
-          {/* <AnimatedLogo></AnimatedLogo> */}
+          <ProfileImage />
         </div>
       </div>
     </Wrapper>

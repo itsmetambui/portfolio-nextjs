@@ -35,7 +35,6 @@ const navigationItems = [
 ];
 
 export default withNavigationContext(({ toggle, fullpage, ...rest }) => {
-  console.log(toggle, rest);
   const { slug } = fullpage.navigation;
 
   const links = navigationItems.map((item) => {
