@@ -21,6 +21,7 @@ export default withNavigationContext(({ fullpage }) => {
       animation="cubeAnimation"
       buttons={false}
       fillParent
+      mobileTouch={false}
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
         if (isFirstLoad.current === true) {

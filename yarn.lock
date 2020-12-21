@@ -5515,10 +5515,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-awesome-slider@^3.2.2:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-3.3.0.tgz#85f06ae96f917fcce1129c40130e4729a30293a0"
-  integrity sha512-XyEgsVb4/k5wTi1TvbDeiQdoQQNkAQ7gv1tFJTljqn4U9E2lnnJVue0Ir63K49pp/qer0D3S6fQGYZknB9hooQ==
+react-awesome-slider@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-4.1.0.tgz#6a800300cb3edd556d2388090f65ac731467639a"
+  integrity sha512-cbPI1MTpVLKbEH6gf9bwtJb8Ja6R/YJonKbUQehfq2B2AAJkgDMeHntaa4SgGCRqWd55xKiT+CkjfKau1QRsKw==
   dependencies:
     web-animation-club "^0.6.0"
 

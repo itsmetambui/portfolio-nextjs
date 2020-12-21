@@ -7,7 +7,6 @@ const ProfileImage = () => {
   const illustrationImageRef = useRef(null);
 
   useEffect(() => {
-    console.log("run effect");
     const imageCanvas = document.createElement("canvas");
     const imageCanvasContext = imageCanvas.getContext("2d");
     const lineCanvas = document.createElement("canvas");
@@ -31,7 +30,7 @@ const ProfileImage = () => {
     }
 
     function onMouseMove(event) {
-      var rect = imageCanvas.getBoundingClientRect();
+      const rect = imageCanvas.getBoundingClientRect();
       points.push({
         time: Date.now(),
         x: event.pageX - rect.left,
@@ -40,8 +39,8 @@ const ProfileImage = () => {
     }
 
     function onTouchMove(event) {
-      var touch = event.targetTouches[0];
-      var rect = imageCanvas.getBoundingClientRect();
+      const touch = event.targetTouches[0];
+      const rect = imageCanvas.getBoundingClientRect();
       points.push({
         time: Date.now(),
         x: touch.pageX - rect.left,
@@ -57,9 +56,11 @@ const ProfileImage = () => {
     }
 
     function tick() {
-      // Remove old points
+      if (!illustrationImageRef.current) {
+        return;
+      }
       points = points.filter(function (point) {
-        var age = Date.now() - point.time;
+        const age = Date.now() - point.time;
         return age < pointLifetime;
       });
       drawLineCanvas();
@@ -68,24 +69,22 @@ const ProfileImage = () => {
     }
 
     function drawLineCanvas() {
-      var minimumLineWidth = 80;
-      var maximumLineWidth = 80;
-      var lineWidthRange = maximumLineWidth - minimumLineWidth;
-      var maximumSpeed = 100;
+      const minimumLineWidth = 80;
+      const maximumLineWidth = 80;
+      const lineWidthRange = maximumLineWidth - minimumLineWidth;
+      const maximumSpeed = 100;
       lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
       lineCanvasContext.lineCap = "round";
-      for (var i = 1; i < points.length; i++) {
-        var point = points[i];
-        var previousPoint = points[i - 1];
-        // Change line width based on speed
-        var distance = getDistanceBetween(point, previousPoint);
-        var speed = Math.max(0, Math.min(maximumSpeed, distance));
-        var percentageLineWidth = (maximumSpeed - speed) / maximumSpeed;
+      for (let i = 1; i < points.length; i++) {
+        const point = points[i];
+        const previousPoint = points[i - 1];
+        const distance = getDistanceBetween(point, previousPoint);
+        const speed = Math.max(0, Math.min(maximumSpeed, distance));
+        const percentageLineWidth = (maximumSpeed - speed) / maximumSpeed;
         lineCanvasContext.lineWidth =
           minimumLineWidth + percentageLineWidth * lineWidthRange;
-        // Fade points as they age
-        var age = Date.now() - point.time;
-        var opacity = (pointLifetime - age) / pointLifetime;
+        const age = Date.now() - point.time;
+        const opacity = (pointLifetime - age) / pointLifetime;
         lineCanvasContext.strokeStyle = "rgba(0, 0, 0, " + opacity + ")";
         lineCanvasContext.beginPath();
         lineCanvasContext.moveTo(previousPoint.x, previousPoint.y);
@@ -104,8 +103,8 @@ const ProfileImage = () => {
         imageCanvas.height = document.querySelector(".drawCanvas").offsetHeight;
       }
       // Emulate background-size: cover
-      var width = imageCanvas.width;
-      var height =
+      const width = imageCanvas.width;
+      const height =
         (imageCanvas.width / illustrationImageRef.current.naturalWidth) *
         illustrationImageRef.current.naturalHeight;
       if (height < imageCanvas.height) {
@@ -128,10 +127,10 @@ const ProfileImage = () => {
     }
 
     return () => {
-      console.log("clean up");
       imageCanvas.removeEventListener("mousemove", onMouseMove);
       imageCanvas.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("resize", resizeCanvases);
+      cancelAnimationFrame(tick);
     };
   }, []);
 
