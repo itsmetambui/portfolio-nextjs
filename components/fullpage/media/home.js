@@ -5,7 +5,6 @@ import format from "date-fns/format";
 import { Link } from "react-awesome-slider/dist/navigation";
 
 import Wrapper from "../components/ContentWrapper";
-import AnimatedLogo from "../components/AnimatedLogo";
 import HeaderWrapper from "../components/HeaderWrapper";
 import useDimensions from "../../../hooks/useWindowDimensions";
 import ProfileImage from "../components/ProfileImage";
@@ -40,10 +39,10 @@ export default () => {
 
   return (
     <Wrapper>
-      <div className="relative flex flex-row items-center justify-center flex-1">
+      <div className="relative flex flex-row items-start justify-center flex-1 sm:items-center">
         <div className="z-10 flex-1 lg:pl-8">
           <HeaderWrapper
-            className="mb-8"
+            className="mb-2 md:mb-8"
             endTagPosition={isSmBreakpoint ? "end" : "inline"}
           >
             <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
@@ -84,22 +83,25 @@ export default () => {
             className={cn(
               "inline-block uppercase text-white bg-orange-500 rounded border border-orange-600 text-xs px-6 py-3 my-3 transition-all",
               "hover:bg-orange-600 hover:text-gray-200",
-              "md:px-5 md:my-5 md:text-sm",
-              "absolute bottom-16 font-sourcecode"
+              "md:px-5 my-8 md:text-sm",
+              "md:absolute md:bottom-16 font-sourcecode"
             )}
             href="/works"
           >
             <span>
-              My works <i className="ml-2 fal fa-hand-point-down" />
+              My works{" "}
+              <i
+                className={`ml-2 fal fa-hand-point-${
+                  isSmBreakpoint ? "right" : "down"
+                }`}
+              />
             </span>
           </Link>
         </div>
         <div
-          className="absolute z-10 ml-16 -mt-16 transition-all abs-center md:left-auto md:right-8 md:ml-0 md:mt-0 lg:right-16"
+          className="fixed bottom-0 transition-all md:absolute md:mb-24 md:bottom-0 md:right-0 md:z-10"
           style={{
             width: logoSize,
-            height: logoSize,
-            transform: !isMdBreakpoint ? "translate(0, -50%)" : "",
           }}
         >
           <ProfileImage />

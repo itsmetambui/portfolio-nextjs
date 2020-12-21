@@ -1,13 +1,13 @@
 import React from "react";
 
-const Wrapper = props => {
+const Wrapper = (props) => {
   return (
-    <div className="h-full flex flex-col p-6 pt-8 md:p-12">
-      <span className="font-tags text-gray-700 hidden md:inline-block">
+    <div className="flex flex-col h-full p-4 md:p-12">
+      <span className="hidden text-gray-700 font-tags md:inline-block">
         &nbsp;&nbsp;&lt;body&gt;
       </span>
-      <div className="flex-1 flex">{props.children}</div>
-      <span className="font-tags text-gray-700  hidden md:inline-block">
+      <div className="flex flex-1">{props.children}</div>
+      <span className="hidden text-gray-700 font-tags md:inline-block">
         &nbsp;&nbsp;&lt;/body&gt;
         <br />
         &lt;/html&gt;
