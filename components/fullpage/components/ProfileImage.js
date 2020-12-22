@@ -131,8 +131,10 @@ const ProfileImage = () => {
   }, []);
 
   return (
-    <div ref={photoContainerRef} className="relative w-full h-full">
-      <div className="absolute flex flex-col items-center text-2xl font-bold text-orange-500 transform -rotate-45 top-32 left-32 font-tags">
+    <div ref={photoContainerRef} className="relative w-full h-full" style={{
+      cursor: 'url(/images/cursor-pencil.png), auto'
+    }}>
+      <div className="absolute flex flex-col items-center text-xl font-bold text-orange-500 transform rotate-45 md:text-2xl md:-rotate-45 left-unset top-16 md:top-32 md:left-32 right-16 md:right-unset font-tags">
         <span>Color me</span>
         <i className="fal fa-hand-point-down" />
       </div>
