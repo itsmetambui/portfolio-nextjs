@@ -2,7 +2,7 @@ import React from "react";
 
 const Wrapper = (props) => {
   return (
-    <div className="flex flex-col h-full max-h-screen p-4 pt-32 md:pt-4 md:p-12">
+    <div className="flex flex-col h-full p-4 pt-32 md:pt-4 md:p-12">
       <span className="hidden text-gray-700 font-tags md:inline-block">
         &nbsp;&nbsp;&lt;body&gt;
       </span>
