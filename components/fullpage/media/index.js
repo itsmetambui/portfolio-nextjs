@@ -3,10 +3,10 @@ import dynamic from "next/dynamic";
 
 // Home's using useWindowDimentions which has window, unvailable with ssr
 const Home = dynamic(() => import("./HomePage"), { ssr: false });
-const Skills = dynamic(() => import("./Skills"), { ssr: false });
-const Works = dynamic(() => import("./Works"), { ssr: false });
-import About from "./About";
-import Contact from "./Contact";
+const Skills = dynamic(() => import("./SkillsPage"), { ssr: false });
+const Works = dynamic(() => import("./WorksPage"), { ssr: false });
+import About from "./AboutPage";
+import Contact from "./ContactPage";
 
 const pageClassnames = "h-full w-full bg-dark-100";
 

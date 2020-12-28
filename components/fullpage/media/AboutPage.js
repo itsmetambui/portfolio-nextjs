@@ -4,7 +4,7 @@ import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
 import AboutCharacter from "../components/AboutCharacter";
 
-export default () => {
+const AboutPage = () => {
   return (
     <Wrapper>
       <div className="relative flex flex-col items-start justify-center w-full md:flex-row md:items-center">
@@ -45,3 +45,5 @@ export default () => {
     </Wrapper>
   );
 };
+
+export default AboutPage;
