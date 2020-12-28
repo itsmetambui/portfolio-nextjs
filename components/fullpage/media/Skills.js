@@ -7,16 +7,16 @@ import TagCanvas from "../components/TagCanvas";
 export default () => {
   return (
     <Wrapper>
-      <div className="flex-1 flex flex-col items-start md:flex-row md:items-center justify-center relative lg:pl-8 w-full">
+      <div className="relative flex flex-col items-start justify-center flex-1 w-full md:flex-row md:items-center lg:pl-8">
         <div className="w-full md:w-1/2">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="font-header text-3xl sm:text-4xl md:text-5xl text-orange-600 font-bold leading-tight transition-all">
+              <h1 className="text-3xl font-bold leading-tight text-orange-600 uppercase transition-all font-header">
                 My skills.
               </h1>
             </HeaderWrapper>
           </div>
-          <div className="hidden md:block text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
+          <div className="hidden text-xs font-light leading-relaxed tracking-wide text-gray-300 md:block font-header md:text-sm">
             <p className="mb-4">
               Main area of my expertise is front end development and everything
               related with web development. HTML, CSS, JS, TS, building single
@@ -25,7 +25,7 @@ export default () => {
             <p className="mb-4">
               I often work as a full-stack developer, experienced with backend
               development with Node, Java, and frameworks like Express, Nestjs,
-              and Spring.
+              Nextjs.
             </p>
 
             <p className="mb-4">

@@ -22,7 +22,12 @@ const TagCanvas = () => {
   return (
     <>
       <div id="skillChartContainer">
-        <canvas id="skillChartCanvas" width={getSize()} height={getSize()}>
+        <canvas
+          id="skillChartCanvas"
+          className="mx-auto"
+          width={getSize()}
+          height={getSize()}
+        >
           <p>Tag Canvas</p>
         </canvas>
       </div>
@@ -45,12 +50,12 @@ const options = {
   shape: "sphere",
   zoom: 1,
   noSelect: true,
-  textFont: "Open Sans",
+  textFont: "Sourcecodepro",
   pinchZoom: true,
   freezeDecel: true,
   fadeIn: 3000,
   initial: [0.3, -0.1],
-  depth: 0.8
+  depth: 0.8,
 };
 
 const items = [
@@ -63,6 +68,7 @@ const items = [
   "React",
   "Redux",
   "Redux-saga",
+  "react-query",
 
   "Node JS",
   "Express",
@@ -77,10 +83,13 @@ const items = [
   "Mongo DB",
 
   "Elasticsearch",
-  "AWS",
+  "Lambda",
+  "Cognito",
+  "Amplify",
+  "Appsync",
   "Jenkins",
   "CircleCI",
-  "Docker"
+  "Docker",
 ];
 
 const getSize = () => {

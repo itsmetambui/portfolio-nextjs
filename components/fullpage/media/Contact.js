@@ -9,16 +9,16 @@ import "./Contact.scss";
 export default () => {
   return (
     <Wrapper>
-      <div className="flex-1 flex flex-col items-start md:flex-row md:items-center justify-center relative lg:pl-8 w-full">
-        <div className="flex-1/2 w-full md:w-1/2 z-10 pb-8 px-12 md:py-8 rounded fixed bottom-0 left-0 shadow-lg contact">
+      <div className="relative flex flex-col items-start justify-center flex-1 w-full md:flex-row md:items-center lg:pl-8">
+        <div className="fixed bottom-0 left-0 z-10 w-full px-12 pb-8 rounded shadow-lg flex-1/2 md:w-1/2 md:py-8 contact">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="font-header text-3xl sm:text-4xl md:text-5xl text-orange-600 font-bold leading-tight transition-all">
+              <h1 className="text-3xl font-bold leading-tight text-orange-600 uppercase transition-all font-header">
                 Contact me.
               </h1>
             </HeaderWrapper>
           </div>
-          <div className="text-gray-300 font-body font-light text-xs md:text-sm tracking-wide leading-relaxed">
+          <div className="text-xs font-light leading-relaxed tracking-wide text-gray-300 font-body md:text-sm">
             <p className="mb-4">
               I am interested in remote and freelance opportunities, especially
               ambitious or large projects. However, if you have other request or
