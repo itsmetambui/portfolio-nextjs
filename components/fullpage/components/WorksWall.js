@@ -48,19 +48,6 @@ export default () => {
               </p>
             </div>
           </li>
-          <li data-thumb="./images/works/wizer.png">
-            <div className="text-lg magicwall-content">
-              <p className="text-gray-700 shadow-sm magicwall-links">
-                <a
-                  className="mx-2 hover:text-gray-800"
-                  target="_blank"
-                  href="https://wizer-training.com/"
-                >
-                  <i className="fal fa-eye" />
-                </a>
-              </p>
-            </div>
-          </li>
           <li data-thumb="./images/works/trillio.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -81,6 +68,20 @@ export default () => {
               </p>
             </div>
           </li>
+          <li data-thumb="./images/works/wizer.png">
+            <div className="text-lg magicwall-content">
+              <p className="text-gray-700 shadow-sm magicwall-links">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://wizer-training.com/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+
           <li data-thumb="./images/works/natours.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
