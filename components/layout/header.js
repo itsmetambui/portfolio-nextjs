@@ -9,7 +9,7 @@ export default () => {
   const toggleNavHandler = () => setToggle((toggle) => setToggle(!toggle));
 
   return (
-    <header className="flex flex-row justify-between h-auto md:flex-col md:h-screen font-header bg-dark-200">
+    <header className="absolute top-0 z-10 flex flex-row justify-between w-full h-auto md:w-auto md:relative md:flex-col md:h-screen font-header bg-dark-200">
       <LogoLink />
       <InternalNavs toggle={toggleNav} />
       <ExternalLinks />
