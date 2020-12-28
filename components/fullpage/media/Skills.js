@@ -11,12 +11,12 @@ export default () => {
         <div className="w-full md:w-1/2">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="text-3xl font-bold leading-tight text-orange-600 transition-all font-header">
+              <h1 className="text-3xl font-extrabold leading-tight text-orange-600 transition-all font-header">
                 My skills.
               </h1>
             </HeaderWrapper>
           </div>
-          <div className="hidden text-xs font-light leading-relaxed tracking-wide text-gray-300 md:block font-header md:text-sm">
+          <div className="hidden text-xs font-normal leading-relaxed tracking-wide text-gray-300 md:block font-header md:text-sm">
             <p className="mb-4">
               Main area of my expertise is front end development and everything
               related with web development. HTML, CSS, JS, TS, building single

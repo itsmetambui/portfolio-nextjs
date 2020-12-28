@@ -13,7 +13,7 @@ export default () => {
         <div className="fixed bottom-0 left-0 z-10 w-full px-12 pb-8 rounded shadow-lg flex-1/2 md:w-1/2 md:py-8 contact">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="text-3xl font-bold leading-tight text-orange-600 transition-all font-header">
+              <h1 className="text-3xl font-extrabold leading-tight text-orange-600 transition-all font-header">
                 Contact me.
               </h1>
             </HeaderWrapper>
