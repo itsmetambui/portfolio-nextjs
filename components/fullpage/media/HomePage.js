@@ -24,13 +24,7 @@ const HomePage = () => {
   const [{ homeLoaded }, dispatch] = useStartup();
   const { isSmBreakpoint, isMdBreakpoint, isLgBreakpoint } = useDimensions();
   const [currentTime, setCurrentTime] = useState(convertTZ(new Date()));
-  const logoSize = isSmBreakpoint
-    ? 400
-    : isMdBreakpoint
-    ? 500
-    : isLgBreakpoint
-    ? 600
-    : 700;
+  const logoSize = isLgBreakpoint ? 400 : 700;
 
   useEffect(() => {
     const interval = setInterval(() => {
