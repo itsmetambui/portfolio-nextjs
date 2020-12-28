@@ -11,7 +11,7 @@ export default () => {
         <div className="w-full md:w-1/2">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="text-3xl font-bold leading-tight text-orange-600 uppercase transition-all font-header">
+              <h1 className="text-3xl font-bold leading-tight text-orange-600 transition-all font-header">
                 My skills.
               </h1>
             </HeaderWrapper>
