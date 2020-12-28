@@ -17,16 +17,39 @@ function App({ Component, pageProps }) {
     <StartupProvider>
       <Provider slug={router.route}>
         <Head>
-          <title>TB - Fullstack Developer</title>
           <meta
             name="viewport"
             content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"
           />
           <meta
             name="description"
-            content="Tam Bui's portfolio page - Fullstack Developer - React - Node - Mongo - Postgres - Docker - CI/CD"
+            content="I'm a Fullstack Developer with 5 years of experience. I enjoy writing beautiful code, code that can be easily understood
+              by future developers"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
+
+          <title>Tam Bui's portfolio page</title>
+          <meta name="title" content="Tam Bui's portfolio page" />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://itsmetambui.dev/" />
+          <meta property="og:title" content="Tam Bui's portfolio page" />
+          <meta
+            property="og:description"
+            content="I'm a Fullstack Developer with 5 years of experience. I enjoy writing beautiful code, code that can be easily understood
+              by future developers"
+          />
+          <meta property="og:image" content="/images/og-background.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://metatags.io/" />
+          <meta property="twitter:title" content="Tam Bui's portfolio page" />
+          <meta
+            property="twitter:description"
+            content="I'm a Fullstack Developer with 5 years of experience. I enjoy writing beautiful code, code that can be easily understood
+              by future developers"
+          />
+          <meta property="twitter:image" content="/images/og-background.png" />
         </Head>
         {!loading && (
           <Layout>
