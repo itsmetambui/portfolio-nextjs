@@ -154,7 +154,7 @@ const ProfileImage = () => {
         ref={containerRef}
         className="w-full h-full"
         style={{
-          backgroundImage: `url(/images/avatar-grey.png)`,
+          backgroundImage: `url(/images/avatar-black.png)`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           position: "relative",
@@ -164,7 +164,7 @@ const ProfileImage = () => {
         <img
           ref={imageRef}
           className="hidden h-full illustrationImage"
-          src="/images/avatar-cartoon.png"
+          src="/images/avatar-color.png"
           alt="Tam Bui's illustration"
           style={{
             objectFit: "cover",
