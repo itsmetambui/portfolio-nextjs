@@ -14,7 +14,7 @@ export default () => {
         <div className="relative w-full md:pl-12">
           <div className="z-10">
             <HeaderWrapper className="mb-4" endTagPosition="end">
-              <h1 className="text-3xl font-bold leading-tight text-orange-600 transition-all font-header sm:text-4xl md:text-5xl">
+              <h1 className="text-3xl font-extrabold leading-tight text-orange-600 transition-all font-header">
                 About me.
               </h1>
             </HeaderWrapper>
