@@ -17,20 +17,20 @@ const Layout = withNavigationContext(({ children, fullpage }) => {
   }, [slug]);
 
   return (
-    <div className="flex flex-col md:flex-row bg-orange-500 h-screen overflow-x-hidden relative z-100 layout">
+    <div className="relative flex flex-col h-screen overflow-x-hidden bg-orange-500 md:flex-row z-100 layout">
       <Header />
-      <div className="flex-1 flex flex-col relative support-device-orientation">
-        <div className="font-body absolute h-full w-full top-0 left-0 text-white">
+      <div className="relative flex flex-col flex-1 support-device-orientation">
+        <div className="absolute top-0 left-0 w-full h-full text-white font-body">
           {children}
         </div>
       </div>
-      <div className="flex-1 flex flex-col relative unsupport-device-orientation">
-        <div className="font-body abs-center w-full text-center text-white ">
+      <div className="relative flex flex-col flex-1 unsupport-device-orientation">
+        <div className="w-full text-center text-white font-body abs-center ">
           <p>Please use Portrait mode for better experience.</p>
           <img
             src="./images/portrait-icon.png"
             alt="portrait"
-            className="text-center inline-block"
+            className="inline-block text-center"
             style={{ height: "2rem" }}
           />
         </div>

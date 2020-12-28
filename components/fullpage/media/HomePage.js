@@ -8,6 +8,7 @@ import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
 import useDimensions from "../../../hooks/useWindowDimensions";
 import ProfileImage from "../components/ProfileImage";
+import { finishLoadHome, useStartup } from "../components/StartupProvider";
 
 const GMT_7 = "Asia/Jakarta";
 const convertTZ = (date) => {
@@ -19,7 +20,8 @@ const convertTZ = (date) => {
   return format(time, "h:mm a");
 };
 
-export default () => {
+const HomePage = () => {
+  const [{ homeLoaded }, dispatch] = useStartup();
   const { isSmBreakpoint, isMdBreakpoint, isLgBreakpoint } = useDimensions();
   const [currentTime, setCurrentTime] = useState(convertTZ(new Date()));
   const logoSize = isSmBreakpoint
@@ -34,7 +36,10 @@ export default () => {
     const interval = setInterval(() => {
       setCurrentTime(convertTZ(new Date()));
     }, 1000);
-    return () => clearInterval(interval);
+    return () => {
+      finishLoadHome(dispatch);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -45,8 +50,24 @@ export default () => {
             className="mb-2 md:mb-8"
             endTagPosition={isSmBreakpoint ? "end" : "inline"}
           >
-            <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
-              <Typist startDelay={4500} cursor={{ hideWhenDone: true }}>
+            {!homeLoaded ? (
+              <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
+                <Typist startDelay={3000} cursor={{ hideWhenDone: true }}>
+                  Hi, I'm{" "}
+                  <span>
+                    <img
+                      src="/images/logo.png"
+                      alt="logo letter"
+                      className="inline-block w-10 h-10 md:h-20 md:w-20"
+                    ></img>
+                  </span>
+                  am,
+                  <br />
+                  fullstack developer.
+                </Typist>
+              </div>
+            ) : (
+              <div className="text-2xl font-extrabold leading-tight transition-all font-header sm:text-4xl md:text-5xl lg:text-5xl">
                 Hi, I'm{" "}
                 <span>
                   <img
@@ -58,26 +79,44 @@ export default () => {
                 am,
                 <br />
                 fullstack developer.
-              </Typist>
-            </div>
+              </div>
+            )}
           </HeaderWrapper>
           <div className="text-xs font-medium tracking-wide text-white md:text-sm font-sourcecode">
-            <Typist startDelay={6000} cursor={{ hideWhenDone: true }}>
+            {!homeLoaded ? (
+              <Typist startDelay={4000} cursor={{ hideWhenDone: true }}>
+                <span>
+                  <i className="mr-1 fal fa-map-marker" />{" "}
+                  {`Can Tho, Vietnam - ${currentTime}`}
+                </span>
+              </Typist>
+            ) : (
               <span>
                 <i className="mr-1 fal fa-map-marker" />{" "}
                 {`Can Tho, Vietnam - ${currentTime}`}
               </span>
-            </Typist>
+            )}
           </div>
           <div className="text-xs font-medium tracking-wide text-gray-300 md:text-sm font-sourcecode">
-            <Typist startDelay={6000} cursor={{ hideWhenDone: true }}>
-              <span>
-                <i className="mr-1 fal fa-certificate" />
-              </span>
-              <span> React / React Native /</span>
-              <span> Node / Mongo / Postgres /</span>
-              <span> AWS / CI, CD ...</span>
-            </Typist>
+            {!homeLoaded ? (
+              <Typist startDelay={4000} cursor={{ hideWhenDone: true }}>
+                <span>
+                  <i className="mr-1 fal fa-certificate" />
+                </span>
+                <span> React / React Native /</span>
+                <span> Node / Mongo / Postgres /</span>
+                <span> AWS / CI, CD ...</span>
+              </Typist>
+            ) : (
+              <div>
+                <span>
+                  <i className="mr-1 fal fa-certificate" />
+                </span>
+                <span> React / React Native /</span>
+                <span> Node / Mongo / Postgres /</span>
+                <span> AWS / CI, CD ...</span>
+              </div>
+            )}
           </div>
           <Link
             className={cn(
@@ -111,3 +150,5 @@ export default () => {
     </Wrapper>
   );
 };
+
+export default HomePage;

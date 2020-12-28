@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Home's using useWindowDimentions which has window, unvailable with ssr
-const Home = dynamic(() => import("./Home"), { ssr: false });
+const Home = dynamic(() => import("./HomePage"), { ssr: false });
 const Skills = dynamic(() => import("./Skills"), { ssr: false });
 const Works = dynamic(() => import("./Works"), { ssr: false });
 import About from "./About";

@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 export default () => {
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 1 });
+    const tl = gsap.timeline({ delay: 0.5 });
     const left = document.querySelector(".left");
     const leftLength = left.getTotalLength();
     const right = document.querySelector(".right");

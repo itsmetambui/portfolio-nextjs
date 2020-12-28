@@ -8,28 +8,22 @@ import {
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
 import Startup from "../startup/StartUp";
+import { finishStartup, useStartup } from "./components/StartupProvider";
 
 const Slider = withNavigationHandlers(AwesomeSlider);
 
 export default withNavigationContext(({ fullpage }) => {
-  const isFirstLoad = useRef(true);
+  const [, dispatch] = useStartup();
 
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={4000}
+      startupDelay={2500}
       animation="cubeAnimation"
       buttons={false}
       fillParent
       mobileTouch={false}
-      onTransitionEnd={() => {
-        // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
-        if (isFirstLoad.current === true) {
-          isFirstLoad.current = false;
-          document.querySelector("body").classList.add("animated");
-          document.querySelector("body").classList.add("visible");
-        }
-      }}
+      onTransitionEnd={() => finishStartup(dispatch)}
       media={media}
     />
   );

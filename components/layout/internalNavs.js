@@ -5,6 +5,7 @@ import {
 } from "react-awesome-slider/dist/navigation";
 import cn from "classnames";
 import "./InternalNavs.scss";
+import { useStartup } from "../fullpage/components/StartupProvider";
 
 const navigationItems = [
   {
@@ -36,9 +37,10 @@ const navigationItems = [
 
 export default withNavigationContext(({ toggle, fullpage, ...rest }) => {
   const { slug } = fullpage.navigation;
+  const [{ startupLoaded }] = useStartup();
 
   const links = navigationItems.map((item) => {
-    return (
+    return startupLoaded ? (
       <Link
         key={item.text}
         href={item.route}
@@ -55,6 +57,21 @@ export default withNavigationContext(({ toggle, fullpage, ...rest }) => {
           {item.text}
         </span>
       </Link>
+    ) : (
+      <div
+        key={item.text}
+        className={cn(
+          "link",
+          "text-gray-700 relative flex justify-center items-center h-16 w-16 cursor-not-allowed"
+        )}
+      >
+        <i
+          className={cn(item.icon, "icon", "abs-center text-xl transition-all")}
+        />
+        <span className={cn("text", "uppercase text-center transition-all")}>
+          {item.text}
+        </span>
+      </div>
     );
   });
   return (
