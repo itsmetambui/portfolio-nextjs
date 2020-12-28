@@ -3,7 +3,7 @@ import { Provider } from "react-awesome-slider/dist/navigation";
 import { useRouter } from "next/router";
 import Script from "react-load-script";
 import Head from "next/head";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout/LayoutContainer";
 
 import "../styles/main.css";
 import "../public/font/css/icons.scss";
