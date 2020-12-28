@@ -7,7 +7,7 @@ import {
   withNavigationContext,
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
-import Startup from "../startup/StartUp";
+import Startup from "../startup/StartupAnimation";
 import { finishStartup, useStartup } from "./components/StartupProvider";
 
 const Slider = withNavigationHandlers(AwesomeSlider);
