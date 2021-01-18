@@ -1,0 +1,6 @@
+{
+  "name": "Test push notification app",
+  "gcm_sender_id": "383177600514",
+  "userVisibleOnly": true,
+  "applicationServerKey": "AAAAWTcqLgI:APA91bG7QW4bowv5C_lTQ6_rh8eRYBA_L0oI4o7lpfOvpp6uvp3xdqlxEd8kfjBzfBNkhadhPShZZd18tGgnXoyIuOTy9LiWYplI4CD1apR4Y53i0Be5l_EEKVuhZqoM-nlO23p3p6bD"
+}
