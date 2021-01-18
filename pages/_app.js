@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Provider } from "react-awesome-slider/dist/navigation";
 import { useRouter } from "next/router";
 import Script from "react-load-script";
@@ -12,6 +12,18 @@ import StartupProvider from "../components/fullpage/components/StartupProvider";
 function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "00a264b4-629e-42b1-8ca2-88414cdba892",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+  }, []);
 
   return (
     <StartupProvider>
@@ -50,6 +62,8 @@ function App({ Component, pageProps }) {
               by future developers"
           />
           <meta property="twitter:image" content="/images/og-background.png" />
+
+          <script src=""></script>
         </Head>
         {!loading && (
           <Layout>
@@ -57,6 +71,7 @@ function App({ Component, pageProps }) {
           </Layout>
         )}
         <Script url="https://code.jquery.com/jquery-3.4.1.min.js" />
+        <Script url="https://cdn.onesignal.com/sdks/OneSignalSDK.js" />
         <Script url="./js/magic-wall.js" onLoad={() => setLoading(false)} />
       </Provider>
     </StartupProvider>
