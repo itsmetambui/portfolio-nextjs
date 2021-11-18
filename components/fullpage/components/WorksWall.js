@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-awesome-slider/dist/navigation";
 import "./WorksWall.scss";
 
 export default () => {
+  const magicWall = useRef(null);
+
   useEffect(() => {
     handleMagicWallLoaded();
   }, []);
 
   const handleMagicWallLoaded = () => {
-    $(".magicwall").magicWall({
+    $(magicWall.current).magicWall({
       maxItemHeight: 300,
       maxItemWidth: 500,
       breakpoints: "2000,1200,800,640,480",
@@ -37,7 +39,7 @@ export default () => {
 
   return (
     <div className="w-full h-full">
-      <div className="magicwall" data-delay="3000">
+      <div className="magicwall" ref={magicWall} data-delay="3000">
         <ul className="magicwall-grid">
           <li data-thumb="./images/works/buildweb.png">
             <div className="text-lg magicwall-content">
@@ -188,13 +190,13 @@ export default () => {
               </p>
             </div>
           </li>
-          <li data-thumb="./images/works/dep.png">
+          <li data-thumb="./images/works/buzzbike.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://dep.com.vn/"
+                  href="https://buzzbike.cc/"
                 >
                   <i className="fal fa-eye" />
                 </a>

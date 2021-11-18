@@ -11,7 +11,6 @@ import StartupProvider from "../components/fullpage/components/StartupProvider";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
 
   return (
     <StartupProvider>
@@ -51,13 +50,9 @@ function App({ Component, pageProps }) {
           />
           <meta property="twitter:image" content="/images/og-background.png" />
         </Head>
-        {!loading && (
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        )}
-        <Script url="https://code.jquery.com/jquery-3.4.1.min.js" />
-        <Script url="./js/magic-wall.js" onLoad={() => setLoading(false)} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </StartupProvider>
   );

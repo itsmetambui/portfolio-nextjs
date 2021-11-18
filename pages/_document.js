@@ -13,6 +13,8 @@ class MyDocument extends Document {
         <body className="h-full">
           <Main />
           <NextScript />
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js" />
+          <script src="/js/magic-wall.js" />
         </body>
       </Html>
     );
