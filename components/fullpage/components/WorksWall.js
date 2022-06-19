@@ -41,6 +41,7 @@ export default () => {
     <div className="w-full h-full">
       <div className="magicwall" ref={magicWall} data-delay="3000">
         <ul className="magicwall-grid">
+
           <li data-thumb="./images/works/buildweb.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -50,13 +51,14 @@ export default () => {
               </p>
             </div>
           </li>
+          
           <li data-thumb="./images/works/trillio.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://tb-trillio.now.sh/"
+                  href="https://tb-trillio.vercel.app/"
                 >
                   <i className="fal fa-eye" />
                 </a>
@@ -70,6 +72,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/wizer.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -90,7 +93,7 @@ export default () => {
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://tb-natours.now.sh/"
+                  href="https://tb-natours.vercel.app/"
                 >
                   <i className="fal fa-eye" />
                 </a>
@@ -104,13 +107,14 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/ilovelamp.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://tb-ilovelamp.now.sh/"
+                  href="https://tb-ilovelamp.vercel.app/"
                 >
                   <i className="fal fa-eye" />
                 </a>
@@ -124,13 +128,14 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/spacexplorer.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://spacexplorer.now.sh/"
+                  href="https://spacexplorer.vercel.app/"
                 >
                   <i className="fal fa-eye" />
                 </a>
@@ -144,6 +149,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/vutachat.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -164,6 +170,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/easierchef.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -177,6 +184,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/codeberry.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -190,6 +198,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/buzzbike.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -203,6 +212,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/hireme.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -212,6 +222,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/spacestep.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -225,19 +236,21 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/tambui.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
                   className="mx-2 hover:text-gray-800"
                   target="_blank"
-                  href="https://itsmetambui.now.sh/"
+                  href="https://itsmetambui.dev/"
                 >
                   <i className="fal fa-eye" />
                 </a>
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/42race.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -251,6 +264,7 @@ export default () => {
               </p>
             </div>
           </li>
+
           <li data-thumb="./images/works/42class.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -264,6 +278,35 @@ export default () => {
               </p>
             </div>
           </li>
+
+          <li data-thumb="./images/works/almapay.png">
+            <div className="text-lg magicwall-content">
+              <p className="text-gray-700 shadow-sm magicwall-links">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://almapay.co/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+
+          <li data-thumb="./images/works/roqtech.png">
+            <div className="text-lg magicwall-content">
+              <p className="text-gray-700 shadow-sm magicwall-links">
+                <a
+                  className="mx-2 hover:text-gray-800"
+                  target="_blank"
+                  href="https://roq.tech/"
+                >
+                  <i className="fal fa-eye" />
+                </a>
+              </p>
+            </div>
+          </li>
+          
         </ul>
       </div>
     </div>
