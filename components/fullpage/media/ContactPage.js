@@ -58,7 +58,7 @@ export default () => {
                     name="name"
                     placeholder="Name"
                     value={name}
-                    onChange={(val) => setName(val)}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <span />
                 </div>
@@ -69,7 +69,7 @@ export default () => {
                     name="email"
                     placeholder="Email"
                     value={email}
-                    onChange={(val) => setEmail(val)}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <span />
                 </div>
@@ -81,7 +81,7 @@ export default () => {
                     name="subject"
                     placeholder="Subject"
                     value={subject}
-                    onChange={(val) => setSubject(val)}
+                    onChange={(e) => setSubject(e.target.value)}
                   />
                   <span />
                 </div>
@@ -94,7 +94,7 @@ export default () => {
                     name="message"
                     placeholder="Message"
                     value={message}
-                    onChange={(val) => setMessage(val)}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                   <span />
                 </div>
