@@ -12,7 +12,9 @@ export default () => {
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  const postMessage = async () => {
+  const postMessage = async (event) => {
+    event.preventDefault();
+
     const data = {
       text: `
       Name: ${name}
@@ -51,7 +53,7 @@ export default () => {
               ambitious or large projects. However, if you have other request or
               question, don’t hesitate to contact me.
             </p>
-            <form>
+            <form onSubmit={postMessage}>
               <div>
                 <div className="inputWrapper">
                   <input
@@ -100,7 +102,7 @@ export default () => {
                   <span />
                 </div>
               </div>
-              <button className="submit" type="submit" onSubmit={postMessage}>
+              <button className="submit" type="submit">
                 Send
               </button>
             </form>
