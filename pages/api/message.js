@@ -14,12 +14,12 @@ export default async function handler(req, res) {
     Message: ${data.message}`;
 
   console.log(text);
-  const result = await axios.post(
+  await axios.post(
     "https://hooks.slack.com/services/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",
     {
       text,
     }
   );
 
-  return res.json(JSON.stringify(result));
+  return res.status(200);
 }
