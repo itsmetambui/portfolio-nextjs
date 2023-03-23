@@ -16,11 +16,10 @@ export default () => {
     event.preventDefault();
 
     const data = {
-      text: `
-      Name: ${name}
-      Email: ${email}
-      Subject: ${subject}
-      Message: ${message}`,
+      name,
+      email,
+      subject,
+      message,
     };
 
     await axios.post("/api/message", {
