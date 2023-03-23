@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from "axios";
 import Wrapper from "../components/ContentWrapper";
 import HeaderWrapper from "../components/HeaderWrapper";
 import MyGoogleMap from "../components/MyGoogleMap";
@@ -12,25 +12,26 @@ export default () => {
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  const postMessage = () => {
+  const postMessage = async () => {
     const data = {
-      name,
-      email,
-      subject,
-      message,
+      text: `
+      Name: ${name}
+      Email: ${email}
+      Subject: ${subject}
+      Message: ${message}`,
     };
 
-    fetch(
+    const result = await axios.post(
       "https://hooks.slack.com/services/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",
       {
-        method: "POST",
-        body: JSON.stringify(data),
+        data,
       }
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
+    );
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    alert("Message sent successfully");
   };
 
   return (
