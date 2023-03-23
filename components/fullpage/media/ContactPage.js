@@ -26,7 +26,7 @@ export default () => {
             </p>
             <form
               method="POST"
-              action="https://formspree.io/itsmetambui@gmail.com"
+              action="https://hooks.slack.com/services/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"
             >
               <div>
                 <div className="inputWrapper">
