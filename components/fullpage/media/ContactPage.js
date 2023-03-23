@@ -23,12 +23,9 @@ export default () => {
       Message: ${message}`,
     };
 
-    const result = await axios.post(
-      "https://hooks.slack.com/services/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",
-      {
-        data,
-      }
-    );
+    await axios.post("/api/message", {
+      data,
+    });
     setName("");
     setEmail("");
     setSubject("");
