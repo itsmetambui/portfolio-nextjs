@@ -51,7 +51,7 @@ export default () => {
               ambitious or large projects. However, if you have other request or
               question, don’t hesitate to contact me.
             </p>
-            <form method="POST">
+            <form>
               <div>
                 <div className="inputWrapper">
                   <input
