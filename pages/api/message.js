@@ -21,5 +21,5 @@ export default async function handler(req, res) {
     }
   );
 
-  return res.json(result);
+  return res.json(JSON.stringify(result));
 }
