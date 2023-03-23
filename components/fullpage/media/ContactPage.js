@@ -7,6 +7,32 @@ import MyGoogleMap from "../components/MyGoogleMap";
 import "./Contact.scss";
 
 export default () => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const postMessage = () => {
+    const data = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
+    fetch(
+      "https://hooks.slack.com/services/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",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+  };
+
   return (
     <Wrapper>
       <div className="relative flex flex-col items-start justify-center flex-1 w-full md:flex-row md:items-center lg:pl-8">
@@ -24,13 +50,16 @@ export default () => {
               ambitious or large projects. However, if you have other request or
               question, don’t hesitate to contact me.
             </p>
-            <form
-              method="POST"
-              action="https://hooks.slack.com/services/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"
-            >
+            <form method="POST">
               <div>
                 <div className="inputWrapper">
-                  <input type="text" name="name" placeholder="Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(val) => setName(val)}
+                  />
                   <span />
                 </div>
                 <div className="inputWrapper">
@@ -39,13 +68,21 @@ export default () => {
                     required
                     name="email"
                     placeholder="Email"
+                    value={email}
+                    onChange={(val) => setEmail(val)}
                   />
                   <span />
                 </div>
               </div>
               <div>
                 <div className="inputWrapper">
-                  <input type="text" name="subject" placeholder="Subject" />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={subject}
+                    onChange={(val) => setSubject(val)}
+                  />
                   <span />
                 </div>
               </div>
@@ -56,11 +93,13 @@ export default () => {
                     required
                     name="message"
                     placeholder="Message"
+                    value={message}
+                    onChange={(val) => setMessage(val)}
                   />
                   <span />
                 </div>
               </div>
-              <button className="submit" type="submit">
+              <button className="submit" type="submit" onSubmit={postMessage}>
                 Send
               </button>
             </form>
