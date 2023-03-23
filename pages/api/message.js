@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const result = await axios.post(
     "https://hooks.slack.com/services/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",
     {
-      data: req.body.data,
+      data: req.body.data.data,
     }
   );
 
