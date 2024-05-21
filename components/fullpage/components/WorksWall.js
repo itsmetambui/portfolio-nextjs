@@ -41,7 +41,6 @@ export default () => {
     <div className="w-full h-full">
       <div className="magicwall" ref={magicWall} data-delay="3000">
         <ul className="magicwall-grid">
-
           <li data-thumb="./images/works/buildweb.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -51,7 +50,7 @@ export default () => {
               </p>
             </div>
           </li>
-          
+
           <li data-thumb="./images/works/trillio.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
@@ -199,7 +198,7 @@ export default () => {
             </div>
           </li>
 
-          <li data-thumb="./images/works/buzzbike.png">
+          {/* <li data-thumb="./images/works/buzzbike.png">
             <div className="text-lg magicwall-content">
               <p className="text-gray-700 shadow-sm magicwall-links">
                 <a
@@ -211,7 +210,7 @@ export default () => {
                 </a>
               </p>
             </div>
-          </li>
+          </li> */}
 
           <li data-thumb="./images/works/hireme.png">
             <div className="text-lg magicwall-content">
@@ -306,7 +305,6 @@ export default () => {
               </p>
             </div>
           </li>
-          
         </ul>
       </div>
     </div>
